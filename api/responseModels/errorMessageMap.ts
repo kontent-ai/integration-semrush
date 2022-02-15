@@ -1,0 +1,16 @@
+export const errorMessageMap: Readonly<Record<string, string>> = {
+    'ERROR 50 :: NOTHING FOUND': 'We haven\'t found any information related to your request.',
+    'ERROR 40 :: MANDATORY PARAMETER action NOT SET OR EMPTY': 'The required parameter action is missing or has been mistyped. Please add it to your request, or check the spelling.',
+    'ERROR 41 :: MANDATORY PARAMETER type NOT SET OR EMPTY': 'The required parameter type is missing or has been mistyped. Please add it to your request, or check the spelling.',
+    'ERROR 42 :: MANDATORY PARAMETER domain NOT SET OR EMPTY': 'The required parameter domain is missing, or its value is not set. Please add it to your request, or set its value.',
+    'ERROR 43 :: MANDATORY PARAMETER phrase NOT SET OR EMPTY': 'The required parameter phrase is missing, or its value is not set. Please add it to your request, or set its value.',
+    'ERROR 44 :: MANDATORY PARAMETER url NOT SET OR EMPTY': 'The required parameter url is missing, or its value is not set. Please add it to your request, or set its value.',
+    'ERROR 46 :: MANDATORY PARAMETER database NOT SET OR EMPTY': 'The required parameter database is missing, or its value is not set. Please add it to your request, or set its value.',
+    'ERROR 120 :: WRONG KEY - ID PAIR': 'You tried to use an unknown API key. Please go to your profile to find your correct API key.',
+    'ERROR 130 :: API DISABLED': 'Your subscription doesn\'t allow you to use API.',
+    'ERROR 131 :: LIMIT EXCEEDED': 'The API request limit for the requested report has been reached. (Valid for users of old API plans.)',
+    'ERROR 132 :: API UNITS BALANCE IS ZERO': 'The API request limit has been reached. To continue using API, recharge your balance, or upgrade your subscription.',
+    'ERROR 133 :: DB ACCESS DENIED': 'You are not allowed to access the requested database.',
+    'ERROR 134 :: TOTAL LIMIT EXCEEDED': 'The API request limit has been reached. (Valid for users of old API plans.)',
+    'ERROR 135 :: API REPORT TYPE DISABLED': 'ou are not allowed to access the requested report.',
+};

@@ -1,0 +1,10 @@
+[build]
+    functions = "api"
+
+[dev]
+    port = 4000
+    autoLaunch = false
+    framework = "#static"
+    targetPort = 3000
+    command = "npm run start"
+    publish = "build"
