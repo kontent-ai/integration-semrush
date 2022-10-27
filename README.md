@@ -44,7 +44,7 @@ Editors can analyze lists of keywords across different regions. The editor needs
 
 Netlify has made this easy. If you click the deploy button below, it will guide you through the process of deploying it to Netlify and leave you with a copy of the repository in your account as well.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Kentico/kontent-integration-semrush)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kontent-ai/integration-semrush)
 
 ### Running manually
 
@@ -83,8 +83,8 @@ This custom element doesn't save any value.
 ## Contributors
 We have collected notes on how to contribute to this project in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-<a href="https://github.com/Kentico/kontent-integration-semrush/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Kentico/kontent-integration-semrush" />
+<a href="https://github.com/kontent-ai/integration-semrush/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kontent-ai/integration-semrush" />
 </a>
 
 ## Additional Resources
@@ -95,15 +95,15 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 
 
 
-[last-commit]: https://img.shields.io/github/last-commit/Kentico/kontent-integration-semrush?style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/Kentico/kontent-integration-semrush.svg?style=for-the-badge
-[contributors-url]: https://github.com/Kentico/kontent-integration-semrush/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Kentico/kontent-integration-semrush.svg?style=for-the-badge
-[forks-url]: https://github.com/Kentico/kontent-integration-semrush/network/members
-[issues-shield]: https://img.shields.io/github/issues/Kentico/kontent-integration-semrush.svg?style=for-the-badge
-[issues-url]: https://github.com/Kentico/kontent-integration-semrush/issues
-[license-shield]: https://img.shields.io/github/license/Kentico/kontent-integration-semrush.svg?style=for-the-badge
-[license-url]: https://github.com/Kentico/kontent-integration-semrush/blob/master/LICENSE
+[last-commit]: https://img.shields.io/github/last-commit/kontent-ai/integration-semrush?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/kontent-ai/integration-semrush.svg?style=for-the-badge
+[contributors-url]: https://github.com/kontent-ai/integration-semrush/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/kontent-ai/integration-semrush.svg?style=for-the-badge
+[forks-url]: https://github.com/kontent-ai/integration-semrush/network/members
+[issues-shield]: https://img.shields.io/github/issues/kontent-ai/integration-semrush.svg?style=for-the-badge
+[issues-url]: https://github.com/kontent-ai/integration-semrush/issues
+[license-shield]: https://img.shields.io/github/license/kontent-ai/integration-semrush.svg?style=for-the-badge
+[license-url]: https://github.com/kontent-ai/integration-semrush/blob/master/LICENSE
 [core-shield]: https://img.shields.io/static/v1?label=&message=core%20integration&style=for-the-badge&color=FF5733
 [stack-shield]: https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white&style=for-the-badge
 [discord-shield]: https://img.shields.io/discord/821885171984891914?label=Discord&logo=Discord&logoColor=white&style=for-the-badge
