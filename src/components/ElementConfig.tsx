@@ -1,4 +1,10 @@
-import React, { FC, ReactNode, useContext, useEffect, useState } from 'react';
+import React, {
+  FC,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState
+} from 'react'
 
 export type ElementConfig = Readonly<{
   keywordsElementCodename: string;
@@ -41,5 +47,5 @@ const ElementConfigContext = React.createContext<ElementConfig>({ keywordsElemen
 const isElementConfig = (v: unknown): v is ElementConfig =>
   typeof v === 'object' &&
   v !== null &&
-  v.hasOwnProperty('keywordsElementCodename') &&
+  'keywordsElementCodename' in v &&
   typeof (v as any).keywordsElementCodename === 'string';

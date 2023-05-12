@@ -1,9 +1,10 @@
-import { EvaluateResult } from '../../api/responseModels/evaluateResponse';
 import { FC, ReactNode } from 'react';
-import { Modal } from './Modal';
+
+import { EvaluateResult } from '../../api/responseModels/evaluateResponse';
 import { useKeywordDifficulty } from '../hooks/useKeywordDifficulty';
-import { useRelatedKeywords } from '../hooks/useRelatedKeywords';
 import { useKeywordVariations } from '../hooks/useKeywordVariations';
+import { useRelatedKeywords } from '../hooks/useRelatedKeywords';
+import { Modal } from './Modal';
 import { SemrushLogo } from './SemrushLogo';
 
 type Props = Readonly<{

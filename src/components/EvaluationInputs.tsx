@@ -1,12 +1,19 @@
-import { FormControl, InputLabel, MenuItem, Select, Stack } from '@mui/material';
-import { regionsDatabase } from '../constants/regionsDatabase';
-import { FC, useState } from 'react';
 import { LoadingButton } from '@mui/lab';
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Stack
+} from '@mui/material'
+import { FC, useState } from 'react';
+
+import { regionsDatabase } from '../constants/regionsDatabase';
 
 type Props = Readonly<{
-    onSubmit: (region: string) => void;
-    isLoading: boolean;
-    isDisabled: boolean;
+  onSubmit: (region: string) => void;
+  isLoading: boolean;
+  isDisabled: boolean;
 }>;
 
 export const EvaluationInputs: FC<Props> = props => {
@@ -29,7 +36,14 @@ export const EvaluationInputs: FC<Props> = props => {
           label="Region"
           size="small"
         >
-          {regionsDatabase.map(region => <MenuItem value={region.id} key={region.id}>{region.name}</MenuItem>)}
+          {regionsDatabase.map(region => (
+            <MenuItem
+              key={region.id}
+              value={region.id}
+            >
+              {region.name}
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
       <LoadingButton

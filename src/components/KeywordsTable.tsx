@@ -1,6 +1,14 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
-import { FC } from 'react';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow
+} from '@mui/material'
 import { abbreviateNumber } from 'js-abbreviation-number';
+import { FC } from 'react';
+
 import { EvaluateResponse, EvaluateResult } from '../../api/responseModels/evaluateResponse';
 
 type Props = Readonly<{
@@ -12,7 +20,10 @@ type Props = Readonly<{
 export const KeywordsTable: FC<Props> = props => {
   return (
     <TableContainer sx={{ height: '100%' }}>
-      <Table stickyHeader size="small">
+      <Table
+        stickyHeader
+        size="small"
+      >
         <TableHead>
           <TableRow>
             <TableCell>

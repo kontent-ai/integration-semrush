@@ -1,3 +1,4 @@
+import { Close } from '@mui/icons-material';
 import {
   Box,
   CircularProgress,
@@ -5,7 +6,6 @@ import {
   Modal as MuiModal,
   Stack,
 } from '@mui/material';
-import { Close } from '@mui/icons-material';
 import { FC, ReactNode } from 'react';
 
 type Props = Readonly<{

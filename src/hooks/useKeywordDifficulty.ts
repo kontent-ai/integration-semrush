@@ -1,5 +1,6 @@
-import { DifficultyResponse, DifficultyResult } from '../../api/responseModels/difficultyResponse';
 import { useCallback } from 'react';
+
+import { DifficultyResponse, DifficultyResult } from '../../api/responseModels/difficultyResponse';
 import { useAsyncResource } from './useAsyncResource';
 
 type Params = Readonly<{
