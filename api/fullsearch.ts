@@ -1,5 +1,6 @@
-import axios from 'axios';
 import { Handler } from '@netlify/functions';
+import axios, { isAxiosError } from 'axios';
+
 import { processResponse } from './responseModels/apiResponse';
 import { parseFullSearchResponse } from './responseModels/fullSearchResponse';
 
@@ -31,7 +32,7 @@ export const handler: Handler = async event => {
   }
   catch (err) {
     console.log('err: ', err);
-    if (!axios.isAxiosError(err)) {
+    if (!isAxiosError(err)) {
       throw err;
     }
 
