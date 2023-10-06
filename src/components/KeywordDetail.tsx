@@ -13,8 +13,9 @@ import {
   Typography,
 } from '@mui/material';
 import { abbreviateNumber } from 'js-abbreviation-number';
-import { Bar, BarChart, Tooltip as ChartTooltip } from 'recharts';
 import { FC, ReactNode } from 'react';
+import { Bar, BarChart, Tooltip as ChartTooltip } from 'recharts';
+
 import { EvaluateResult } from '../../api/responseModels/evaluateResponse';
 
 type Props = Readonly<{
@@ -43,7 +44,7 @@ export const KeywordDetail: FC<Props> = props => (
         />
         {props.difficulty !== null && (
           <BoxSection
-            withProgress={true}
+            withProgress
             tooltipText="An estimate of how difficult it would be to rank well in organic search results for a particular keyword. The higher the percentage, the harder it is to achieve high rankings for the given keyword."
             headline="Keyword Difficulty"
             value={props.difficulty}
@@ -79,9 +80,16 @@ export const KeywordDetail: FC<Props> = props => (
           </Tooltip>
         </>
         <Box sx={{ paddingTop: '20px' }}>
-          <BarChart width={250} height={100} data={props.evaluateResult.trends.map(trend => ({ trend }))}>
+          <BarChart
+            width={250}
+            height={100}
+            data={props.evaluateResult.trends.map(trend => ({ trend }))}
+          >
             <ChartTooltip />
-            <Bar dataKey="trend" fill="#a6c8ff" />
+            <Bar
+              dataKey="trend"
+              fill="#a6c8ff"
+            />
           </BarChart>
         </Box>
 
@@ -99,10 +107,12 @@ export const KeywordDetail: FC<Props> = props => (
               title="Any variation of your seed keyword or keyword phrase in any order."
               arrow
             >
-              <Typography>
-              </Typography>
+              <Typography />
             </Tooltip>
-            <SearchVolumeKeywordTable rows={props.keywordVariations} header="Keyword Variations" />
+            <SearchVolumeKeywordTable
+              rows={props.keywordVariations}
+              header="Keyword Variations"
+            />
           </>
         </StyledBox>
       )}
@@ -113,10 +123,12 @@ export const KeywordDetail: FC<Props> = props => (
               title="Related keywords, synonyms, and variations relevant to a queried term."
               arrow
             >
-              <Typography>
-              </Typography>
+              <Typography />
             </Tooltip>
-            <SearchVolumeKeywordTable rows={props.relatedKeywords} header="Related Keywords" />
+            <SearchVolumeKeywordTable
+              rows={props.relatedKeywords}
+              header="Related Keywords"
+            />
           </>
         </StyledBox>
       )}
@@ -138,7 +150,12 @@ const StyledBox: FC<StyledBoxProps> = props => (
     }}
     p={1}
     spacing={1}
-    divider={<Divider orientation="horizontal" flexItem />}
+    divider={(
+      <Divider
+        orientation="horizontal"
+        flexItem
+      />
+    )}
   >
     {props.children}
   </Stack>
@@ -176,7 +193,11 @@ const BoxSection: FC<BoxSectionProps> = props => (
       )}
       {props.withProgress
         ? (
-          <Typography variant="caption" component="div" color="text.secondary">
+          <Typography
+            variant="caption"
+            component="div"
+            color="text.secondary"
+          >
             <strong>{props.value}</strong>
           </Typography>
         )

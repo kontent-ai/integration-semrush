@@ -1,13 +1,21 @@
+import {
+  Alert,
+  AlertTitle,
+  Box,
+  Divider,
+  Stack,
+  Typography
+} from '@mui/material'
 import { FC, useEffect, useState } from 'react';
-import { Alert, AlertTitle, Box, Divider, Stack, Typography } from '@mui/material';
-import { KeywordsTable } from './KeywordsTable';
-import { EvaluationInputs } from './EvaluationInputs';
-import { useConfig } from './ElementConfig';
+
 import { EvaluateResponse, EvaluateResult } from '../../api/responseModels/evaluateResponse';
+import { useKeywordsFromElement } from '../hooks/useKeywordsFromElement';
+import { useConfig } from './ElementConfig';
+import { EvaluationInputs } from './EvaluationInputs';
 import { KeywordDetail } from './KeywordDetail';
 import { KeywordDetailModalContainer } from './KeywordDetailModalContainer';
+import { KeywordsTable } from './KeywordsTable';
 import { SemrushLogo } from './SemrushLogo';
-import { useKeywordsFromElement } from '../hooks/useKeywordsFromElement';
 
 export const App: FC = () => {
   const config = useConfig();
@@ -66,7 +74,8 @@ export const App: FC = () => {
         sx={{ height: '100%' }}
       >
         <Stack
-          direction="row" spacing={4}
+          direction="row"
+          spacing={4}
         >
           <Typography sx={{ pt: '10px' }}>
             <strong>Keyword Analysis:</strong>
@@ -93,11 +102,19 @@ export const App: FC = () => {
         </Stack>
 
         <Divider sx={{ pt: '5px' }} />
-        <Typography variant="caption" display="block" gutterBottom>
+        <Typography
+          variant="caption"
+          display="block"
+          gutterBottom
+        >
           This extension reads and analyses keywords from a defined textfield. It can analyze up to 100 comma-separated
           phrases.
         </Typography>
-        <Typography variant="caption" display="block" gutterBottom>
+        <Typography
+          variant="caption"
+          display="block"
+          gutterBottom
+        >
           Currently reading from: <strong>{config.keywordsElementCodename}</strong>
         </Typography>
         <Divider />
@@ -110,12 +127,12 @@ export const App: FC = () => {
             </Alert>
           )
           : region && tableDataResponse && (
-          <KeywordsTable
-            data={tableDataResponse}
-            region={region}
-            onKeywordSelected={setSelectedKeywordDetail}
-          />
-        )}
+            <KeywordsTable
+              data={tableDataResponse}
+              region={region}
+              onKeywordSelected={setSelectedKeywordDetail}
+            />
+          )}
         {selectedKeywordDetail && region && (
           <KeywordDetailModalContainer
             region={region}

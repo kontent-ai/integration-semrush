@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import { useConfig } from '../components/ElementConfig';
 
 export const useKeywordsFromElement = (): ReadonlyArray<string> | null => {

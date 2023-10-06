@@ -1,5 +1,5 @@
-import { ParseResult } from './parseUtils';
 import { ApiResponse, createParseResponse } from './apiResponse';
+import { ParseResult } from './parseUtils';
 
 export type DifficultyResponse = ApiResponse<DifficultyResult>;
 
